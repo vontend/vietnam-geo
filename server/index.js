@@ -1,8 +1,11 @@
 const express = require("express");
 const fs = require("fs");
+const cors = require("cors");
 const mongoose = require("mongoose");
 
 const server = express();
+
+server.use(cors());
 
 server.get("/state", async (req, res) => {
   try {
